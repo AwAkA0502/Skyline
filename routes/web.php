@@ -10,6 +10,7 @@ use App\Http\Controllers\Admin\PortfolioController;
 use App\Http\Controllers\Admin\RealisasiController;
 use App\Http\Controllers\Admin\Auth\LoginController;
 use App\Http\Controllers\Admin\CreateAdminController;
+use App\Http\Controllers\CategoryController;
 
 Route::prefix('admin')->group(function () {
     // Rute login/logout admin
@@ -40,6 +41,67 @@ Route::prefix('admin')->group(function () {
 
         // Rute untuk membuat admin baru
         Route::get('/dashboard/create-admin', [App\Http\Controllers\Admin\CreateAdminController::class, 'index'])->name('admin.dashboard.create-admin');
+        
+        // Route::get('/dashboard/pages/home/category', [DashboardController::class, 'index'])->name('admin.dashboard.home.category');
+
+        // Routes untuk HomePage
+        Route::prefix('dashboard/pages/home')->group(function () {
+            Route::get('hero', [DashboardController::class, 'homeHero'])->name('home.hero');
+            Route::get('category', [DashboardController::class, 'homeCategory'])->name('home.category');
+            Route::post('category', [CategoryController::class, 'store'])->name('category.store');
+            Route::resource('categories', CategoryController::class);
+            Route::delete('categories/{category}', [CategoryController::class, 'destroy'])->name('categories.destroy');
+            Route::resource('categories', CategoryController::class);
+
+            Route::get('popular', [DashboardController::class, 'homePopular'])->name('home.popular');
+            Route::get('3ddesain', [DashboardController::class, 'home3DDesain'])->name('home.3ddesain');
+            Route::get('realization', [DashboardController::class, 'homeRealization'])->name('home.realization');
+            Route::get('price', [DashboardController::class, 'homePrice'])->name('home.price');
+            Route::get('package', [DashboardController::class, 'homePackage'])->name('home.package');
+            Route::get('about', [DashboardController::class, 'homeAbout'])->name('home.about');
+            Route::get('client', [DashboardController::class, 'homeClient'])->name('home.client');
+            Route::get('articel', [DashboardController::class, 'homeArticel'])->name('home.articel');
+        });
+
+        // Routes untuk Realization
+        Route::prefix('dashboard/pages/realization')->group(function () {
+            Route::get('banner', [DashboardController::class, 'realizationBanner'])->name('realization.banner');
+            Route::get('realization', [DashboardController::class, 'realizationRealization'])->name('realization.realization');
+            Route::get('project', [DashboardController::class, 'realizationProject'])->name('realization.project');
+            Route::get('video', [DashboardController::class, 'realizationVideo'])->name('realization.video');
+            Route::get('other', [DashboardController::class, 'realizationOther'])->name('realization.other');
+            Route::get('category', [DashboardController::class, 'realizationCategory'])->name('realization.category');
+        });
+
+        // Routes untuk Blog
+        Route::prefix('dashboard/pages/blog')->group(function () {
+            Route::get('banner', [DashboardController::class, 'blogBanner'])->name('blog.banner');
+            Route::get('latest', [DashboardController::class, 'blogLatest'])->name('blog.latest');
+            Route::get('articel', [DashboardController::class, 'blogArticel'])->name('blog.articel');
+            Route::get('like', [DashboardController::class, 'blogLike'])->name('blog.like');
+        });
+
+        // Routes untuk Blog Details
+        Route::prefix('dashboard/pages/blog_details')->group(function () {
+            Route::get('latest', [DashboardController::class, 'blogDetailsLatest'])->name('blog_details.latest');
+            Route::get('articel', [DashboardController::class, 'blogDetailsArticel'])->name('blog_details.articel');
+            Route::get('like', [DashboardController::class, 'blogDetailsLike'])->name('blog_details.like');
+        });
+
+        // Routes untuk Project Details
+        Route::prefix('dashboard/pages/project_details')->group(function () {
+            Route::get('latest', [DashboardController::class, 'projectDetailsLatest'])->name('project_details.latest');
+            Route::get('articel', [DashboardController::class, 'projectDetailsArticel'])->name('project_details.articel');
+            Route::get('like', [DashboardController::class, 'projectDetailsLike'])->name('project_details.like');
+        });
+
+        // Routes untuk Portofolio
+        Route::prefix('dashboard/pages/portofolio')->group(function () {
+            Route::get('banner', [DashboardController::class, 'portofolioBanner'])->name('portofolio.banner');
+            Route::get('portofolios', [DashboardController::class, 'portofolioPortofolios'])->name('portofolio.portofolios');
+            Route::get('videos', [DashboardController::class, 'portofolioVideos'])->name('portofolio.videos');
+        });
+
     });
 });
 
@@ -64,6 +126,3 @@ Route::get('/admin', function () {
 Route::get('/404', function () {
     return view('error.404');
 })->name('404');
-
-//buat konten
-Route::get('/get-pages-home-hero', [AjaxController::class, 'getHomeHero'])->name('get.pages.home.hero');
