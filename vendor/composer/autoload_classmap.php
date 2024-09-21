@@ -10,7 +10,6 @@ return array(
     'App\\Http\\Controllers\\Admin\\BlogController' => $baseDir . '/app/Http/Controllers/Admin/BlogController.php',
     'App\\Http\\Controllers\\Admin\\CreateAdminController' => $baseDir . '/app/Http/Controllers/Admin/CreateAdminController.php',
     'App\\Http\\Controllers\\Admin\\DashboardController' => $baseDir . '/app/Http/Controllers/Admin/DashboardController.php',
-    'App\\Http\\Controllers\\Admin\\HomepageController' => $baseDir . '/app/Http/Controllers/Admin/HomepageController.php',
     'App\\Http\\Controllers\\Admin\\PortfolioController' => $baseDir . '/app/Http/Controllers/Admin/PortfolioController.php',
     'App\\Http\\Controllers\\Admin\\PricingController' => $baseDir . '/app/Http/Controllers/Admin/PricingController.php',
     'App\\Http\\Controllers\\Admin\\RealisasiController' => $baseDir . '/app/Http/Controllers/Admin/RealisasiController.php',

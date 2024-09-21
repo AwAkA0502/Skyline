@@ -512,7 +512,6 @@ class ComposerStaticInit7e8c3c14ff33b199b4a0838993eb8423
         'App\\Http\\Controllers\\Admin\\BlogController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/BlogController.php',
         'App\\Http\\Controllers\\Admin\\CreateAdminController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/CreateAdminController.php',
         'App\\Http\\Controllers\\Admin\\DashboardController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/DashboardController.php',
-        'App\\Http\\Controllers\\Admin\\HomepageController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/HomepageController.php',
         'App\\Http\\Controllers\\Admin\\PortfolioController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/PortfolioController.php',
         'App\\Http\\Controllers\\Admin\\PricingController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/PricingController.php',
         'App\\Http\\Controllers\\Admin\\RealisasiController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/RealisasiController.php',
