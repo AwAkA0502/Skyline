@@ -1,1 +1,51 @@
 node_modules
+# Laravel specific files
+/vendor
+/node_modules
+/public/storage
+/storage/*.key
+/.idea
+/.vscode
+/.env
+/.env.*.php
+/.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+.env.backup
+
+# Ignore compiled files and folders
+/vendor
+/node_modules
+/bootstrap/cache/*.php
+/storage/framework/cache/data
+/storage/framework/sessions
+/storage/framework/testing
+/storage/framework/views
+
+# Ignore environment specific files
+.env
+.env.backup
+.env.local
+.env.development
+.env.production
+.env.testing
+
+# Ignore all log files and database backups
+*.log
+*.sql
+*.sqlite
+*.env.local.php
+*.env.backup
+*.env.backup.php
+
+# Ignore IDE and editor specific files
+/.idea/
+/.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Ignore system files
+Thumbs.db
+.DS_Store
