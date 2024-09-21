@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 
 class CategoryController extends Controller
 {
+    public function index(){
+        
+    }
+
     public function store(Request $request)
     {
         // Validasi input
@@ -38,17 +42,16 @@ class CategoryController extends Controller
     // Metode untuk memperbarui data kategori
     public function update(Request $request, $id)
     {
-        // Validasi input
         $request->validate([
             'name' => 'required|string|max:255',
         ]);
-
-        // Cari kategori berdasarkan ID dan perbarui data
+    
         $category = Category::findOrFail($id);
         $category->name = $request->input('name');
         $category->save();
-
-        // Redirect kembali dengan pesan sukses
-        return back()->with('success', 'Kategori berhasil diperbarui!');
+    
+        // return redirect()->route('categories.index')->with('success', 'Kategori berhasil diperbarui!');
+        return back();
     }
+    
 }

@@ -44,7 +44,7 @@
                             <td>{{ $category->id }}</td>
                             <td>{{ $category->name }}</td>
                             <td class="flex justify-between items-start gap-3">
-                                <button class="px-3 py-2 bg-gray-300 font-semibold rounded-lg text-white mr-3"
+                                <button class="px-3 py-2 bg-gray-300 font-semibold rounded-lg text-white mr-3 edit-button"
                                     data-id="{{ $category->id }}" 
                                     data-name="{{ $category->name }}" >Edit</button>
                                 <button class="px-3 py-2 bg-red-500 font-semibold rounded-lg text-white delete-button" data-id="{{ $category->id }}">Delete</button>
@@ -64,25 +64,33 @@
         </div>
         <!-- Add other cards or content here -->
     </div>
+<!-- Modal untuk Edit Kategori -->
+<div id="editModal" class="fixed inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center hidden">
+    <div class="bg-white p-6 rounded-lg shadow-lg w-1/2 relative">
+        <!-- Tombol untuk menutup modal (opsional) -->
+        <button type="button" id="closeEditModalButton" class="absolute top-2 right-2 text-gray-600 hover:text-gray-800">
+            &times;
+        </button>
 
-    <!-- Modal Edit -->
-    <div id="editModal" class="fixed inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center hidden z-50">
-        <div class="bg-white p-6 rounded-lg">
-            <h2 class="text-xl font-bold mb-4">Edit Kategori</h2>
-            <form id="editCategoryForm" method="POST">
-                @csrf
-                @method('PUT') <!-- Metode PUT untuk edit -->
-                <div class="mb-4">
-                    <label for="editName" class="block text-sm font-medium text-gray-700">Nama Kategori</label>
-                    <input type="text" id="editName" name="name" class="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-                </div>
-                <div class="flex justify-end">
-                    <button type="button" id="closeEditModalButton" class="px-4 py-2 bg-gray-500 text-white rounded-lg mr-2">Batal</button>
-                    <button type="submit" class="px-4 py-2 bg-blue-500 text-white rounded-lg">Simpan</button>
-                </div>
-            </form>
-        </div>
+        <h2 class="text-xl font-bold mb-4">Edit Kategori</h2>
+        <!-- Form untuk mengedit kategori -->
+        <form id="editCategoryForm" method="POST">
+            @csrf
+            {{-- @method('PUT') <!-- Menggunakan PUT atau PATCH untuk update --> --}}
+            <div class="mb-4">
+                <label for="editName" class="block text-sm font-medium text-gray-700">Nama Kategori</label>
+                <input type="text" id="editName" name="name" class="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div class="flex justify-end">
+                <button type="button" id="closeEditModalButton" class="px-4 py-2 bg-gray-500 text-white rounded-lg mr-2">Batal</button>
+                <button type="submit" class="px-4 py-2 bg-blue-500 text-white rounded-lg">Simpan</button>
+            </div>
+        </form>
     </div>
+</div>
+
+    
+    
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
@@ -116,37 +124,39 @@
         });
 
         document.addEventListener('DOMContentLoaded', function () {
-            const editButtons = document.querySelectorAll('.edit-button');
-            const editModal = document.getElementById('editModal');
-            const editNameInput = document.getElementById('editName');
-            const editForm = document.getElementById('editCategoryForm');
-            let currentCategoryId;
+            // Pilih elemen parent yang membungkus semua tombol edit
+            const container = document.querySelector('body'); // Atau elemen spesifik seperti '.container'
 
-            editButtons.forEach(button => {
-                button.addEventListener('click', function () {
-                    currentCategoryId = this.getAttribute('data-id');
-                    const categoryName = this.getAttribute('data-name');
+            // Event delegation pada container
+            container.addEventListener('click', function (e) {
+                // Cek apakah target yang diklik adalah tombol dengan class 'edit-button'
+                if (e.target && e.target.classList.contains('edit-button')) {
+                    // Ambil ID dan nama dari tombol yang diklik
+                    const categoryId = e.target.getAttribute('data-id');
+                    const categoryName = e.target.getAttribute('data-name');
 
-                    // Debug: Periksa apakah data-id dan data-name diambil dengan benar
-                    console.log('ID Kategori:', currentCategoryId, 'Nama Kategori:', categoryName);
+                    console.log('ID Kategori:', categoryId, 'Nama Kategori:', categoryName);
 
                     // Isi input dengan data yang diambil
-                    editNameInput.value = categoryName;
+                    const editNameInput = document.getElementById('editName');
+                    const editForm = document.getElementById('editCategoryForm');
+                    const editModal = document.getElementById('editModal');
 
-                    // Set action form dengan ID kategori yang benar
-                    editForm.action = `/categories/${currentCategoryId}`;
+                    editNameInput.value = categoryName;
+                    // editForm.action = `/categories/${categoryId}`;
+                    editForm.action = `/admin/dashboard/pages/home/categories-update/${categoryId}`;
 
                     // Tampilkan modal dengan menghapus class 'hidden'
                     editModal.classList.remove('hidden');
-                });
+                }
             });
 
-            // Tutup modal ketika tombol batal ditekan
+            // Tutup modal ketika tombol 'Batal' diklik
             document.getElementById('closeEditModalButton').addEventListener('click', function () {
+                const editModal = document.getElementById('editModal');
                 editModal.classList.add('hidden');
             });
         });
-
 
         document.addEventListener('click', function (e) {
             if (e.target && e.target.classList.contains('delete-button')) {
@@ -182,6 +192,51 @@
             });
         </script>
     @endif
+
+    {{-- <script>
+        document.addEventListener('DOMContentLoaded', function () {
+    // Pilih modal dan elemen terkait
+    const editModal = document.getElementById('editModal'); // Pastikan editModal ada di DOM
+    const editNameInput = document.getElementById('editName'); // Input nama kategori
+    const editForm = document.getElementById('editCategoryForm'); // Form edit kategori
+
+    // Event delegation pada container body untuk menangani klik pada tombol edit
+    document.body.addEventListener('click', function (e) {
+        // Cek apakah target yang diklik adalah tombol dengan class 'edit-button'
+        if (e.target && e.target.classList.contains('edit-button')) {
+            // Ambil ID dan nama dari tombol yang diklik
+            const categoryId = e.target.getAttribute('data-id');
+            const categoryName = e.target.getAttribute('data-name');
+
+            // Debugging untuk memastikan data diambil dengan benar
+            console.log('ID Kategori:', categoryId, 'Nama Kategori:', categoryName);
+
+            // Isi input dengan data yang diambil
+            editNameInput.value = categoryName;
+
+            // Set action form dengan ID kategori yang benar
+            // Gunakan URL helper Laravel untuk menghindari masalah URL
+            editForm.action = `/categories/${categoryId}`;
+
+            // Tampilkan modal dengan menghapus class 'hidden'
+            editModal.classList.remove('hidden');
+        }
+    });
+
+    // Tutup modal ketika tombol 'Batal' diklik
+    document.getElementById('closeEditModalButton').addEventListener('click', function () {
+        editModal.classList.add('hidden');
+    });
+
+    // Event listener untuk menutup modal jika area di luar modal diklik
+    editModal.addEventListener('click', function (e) {
+        if (e.target === editModal) {
+            editModal.classList.add('hidden');
+        }
+    });
+});
+
+    </script> --}}
     
     
 @endsection

@@ -51,7 +51,9 @@ Route::prefix('admin')->group(function () {
             Route::post('category', [CategoryController::class, 'store'])->name('category.store');
             Route::resource('categories', CategoryController::class);
             Route::delete('categories/{category}', [CategoryController::class, 'destroy'])->name('categories.destroy');
-            Route::resource('categories', CategoryController::class);
+            // Route::post('categories-update/{category}', [CategoryController::class, 'update'])->name('categories.update');
+            Route::post('categories-update/{id}', [CategoryController::class, 'update'])->name('categories.update');
+
 
             Route::get('popular', [DashboardController::class, 'homePopular'])->name('home.popular');
             Route::get('3ddesain', [DashboardController::class, 'home3DDesain'])->name('home.3ddesain');
