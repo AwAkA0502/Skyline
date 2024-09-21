@@ -91,21 +91,20 @@
                                 </a>
                                 <div class="collapse" id="pagesCollapseHome" aria-labelledby="headingAuth" data-bs-parent="#sidenavAccordionPages">
                                     <nav class="sb-sidenav-menu-nested nav">
-                                        <a class="nav-link" href="#">Hero</a>
-                                        <a class="nav-link" href="#">Kategori</a>
-                                        <a class="nav-link" href="#">Desain Populer</a>
-                                        <a class="nav-link" href="#">Desain 3 Dimensi</a>
-                                        <a class="nav-link" href="#">Realisasi Pembangunan</a>
-                                        <a class="nav-link" href="#">Video Pembangunan</a>
-                                        <a class="nav-link" href="#">Harga Jasa Arsitek</a>
-                                        <a class="nav-link" href="#">PILIHAN PAKET DESAIN</a>
-                                        <a class="nav-link" href="#">Harga Jasa Arsitek</a>
-                                        <a class="nav-link" href="#">Solusi lengkap untuk proyek bangunan Anda.</a>
-                                        <a class="nav-link" href="#">Apa yang Dipikirkan Masyarakat Tentang Kami</a>
-                                        <a class="nav-link" href="#">Client</a>
-                                        <a class="nav-link" href="#">Statistik</a>
-                                        <a class="nav-link" href="#">Artikel</a>
-                                        <a class="nav-link" href="#">CTA</a>
+                                        <a class="nav-link" href="#" id="home-hero">Hero</a>
+                                        <a class="nav-link" href="#" id="home-kategori">Kategori</a>
+                                        <a class="nav-link" href="#" id="home-desainpop">Desain Populer</a>
+                                        <a class="nav-link" href="#" id="home-desain3d">Desain 3 Dimensi</a>
+                                        <a class="nav-link" href="#" id="home-realisasi">Realisasi Pembangunan</a>
+                                        <a class="nav-link" href="#" id="home-video">Video Pembangunan</a>
+                                        <a class="nav-link" href="#" id="home-harga">Harga Jasa Arsitek</a>
+                                        <a class="nav-link" href="#" id="home-paket">PILIHAN PAKET DESAIN</a>
+                                        <a class="nav-link" href="#" id="home-solusi">Solusi lengkap untuk proyek bangunan Anda.</a>
+                                        <a class="nav-link" href="#" id="home-pikirkan">Apa yang Dipikirkan Masyarakat Tentang Kami</a>
+                                        <a class="nav-link" href="#" id="home-client">Client</a>
+                                        <a class="nav-link" href="#" id="home-statis">Statistik</a>
+                                        <a class="nav-link" href="#" id="home-artikel">Artikel</a>
+                                        <a class="nav-link" href="#" id="home-cta">CTA</a>
                                     </nav>
                                 </div>
                                 
@@ -115,6 +114,7 @@
                                 </a>
                                 <div class="collapse" id="pagesCollapseRealisasi" aria-labelledby="headingError" data-bs-parent="#sidenavAccordionPages">
                                     <nav class="sb-sidenav-menu-nested nav">
+                                        <a class="nav-link" href="#">Banner</a>
                                         <a class="nav-link" href="#">Realisasi Pembangunan</a>
                                         <a class="nav-link" href="#">Proyek Berjalan</a>
                                         <a class="nav-link" href="#">Video Realisasi Pembangunan</a>
@@ -122,6 +122,109 @@
                                         <a class="nav-link" href="#">Pilih Kategori Lainnya</a>
                                     </nav>
                                 </div>
+                                
+                                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError" onclick="collapseBlog()">
+                                    Blog
+                                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                </a>
+                                <div class="collapse" id="pagesCollapseBlog" aria-labelledby="headingError" data-bs-parent="#sidenavAccordionPages">
+                                    <nav class="sb-sidenav-menu-nested nav">
+                                        <a class="nav-link" href="#">Banner</a>
+                                        <a class="nav-link" href="#">Latest Post</a>
+                                        <a class="nav-link" href="#">Articles & News</a>
+                                        <a class="nav-link" href="#">Maybe you like</a>
+                                    </nav>
+                                </div>
+                                
+                                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError" onclick="collapseBlogDetails()">
+                                    Blog Details
+                                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                </a>
+                                <div class="collapse" id="pagesCollapseBlogDetails" aria-labelledby="headingError" data-bs-parent="#sidenavAccordionPages">
+                                    <nav class="sb-sidenav-menu-nested nav">
+                                        <a class="nav-link" href="#">Banner</a>
+                                        <a class="nav-link" href="#">Realisasi Pembangunan</a>
+                                        <a class="nav-link" href="#">Proyek Berjalan</a>
+                                        <a class="nav-link" href="#">Video Realisasi Pembangunan</a>
+                                        <a class="nav-link" href="#">Realisasi Pembangunan Lainnya</a>
+                                        <a class="nav-link" href="#">Pilih Kategori Lainnya</a>
+                                    </nav>
+                                </div>
+
+                                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError" onclick="collapseProjectDetails()">
+                                    Project Details
+                                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                </a>
+                                <div class="collapse" id="pagesCollapseProjectDetails" aria-labelledby="headingError" data-bs-parent="#sidenavAccordionPages">
+                                    <nav class="sb-sidenav-menu-nested nav">
+                                        <a class="nav-link" href="#">Banner</a>
+                                        <a class="nav-link" href="#">Realisasi Pembangunan</a>
+                                        <a class="nav-link" href="#">Proyek Berjalan</a>
+                                        <a class="nav-link" href="#">Video Realisasi Pembangunan</a>
+                                        <a class="nav-link" href="#">Realisasi Pembangunan Lainnya</a>
+                                        <a class="nav-link" href="#">Pilih Kategori Lainnya</a>
+                                    </nav>
+                                </div>
+
+                                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError" onclick="collapsePortofolio()">
+                                    Portofolio
+                                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                </a>
+                                <div class="collapse" id="pagesCollapsePortofolio" aria-labelledby="headingError" data-bs-parent="#sidenavAccordionPages">
+                                    <nav class="sb-sidenav-menu-nested nav">
+                                        <a class="nav-link" href="#">Banner</a>
+                                        <a class="nav-link" href="#">Desain Rumah</a>
+                                        <a class="nav-link" href="#">Video Realisasi Pembangunan</a>
+                                    </nav>
+                                </div>
+
+                                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError" onclick="collapseContact()">
+                                    Contact Us
+                                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                </a>
+                                <div class="collapse" id="pagesCollapseContact" aria-labelledby="headingError" data-bs-parent="#sidenavAccordionPages">
+                                    <nav class="sb-sidenav-menu-nested nav">
+                                        <a class="nav-link" href="#">Banner</a>
+                                        <a class="nav-link" href="#">Kontak Skyline Arsitek</a>
+                                        <a class="nav-link" href="#">Alamat Skyline Arsitek</a>
+                                    </nav>
+                                </div>
+
+                                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError" onclick="collapsePricing()">
+                                    Pricing
+                                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                </a>
+                                <div class="collapse" id="pagesCollapsePricing" aria-labelledby="headingError" data-bs-parent="#sidenavAccordionPages">
+                                    <nav class="sb-sidenav-menu-nested nav">
+                                        <a class="nav-link" href="#">Banner</a>
+                                        <a class="nav-link" href="#">Harga Jasa Skyline Terbaru</a>
+                                        <a class="nav-link" href="#">Pilihan Paket Desain</a>
+                                        <a class="nav-link" href="#">Sistem Pembayaran</a>
+                                    </nav>
+                                </div>
+
+                                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError" onclick="collapseProfil()">
+                                    Profil
+                                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                </a>
+                                <div class="collapse" id="pagesCollapseProfil" aria-labelledby="headingError" data-bs-parent="#sidenavAccordionPages">
+                                    <nav class="sb-sidenav-menu-nested nav">
+                                        <a class="nav-link" href="#">Banner</a>
+                                        <a class="nav-link" href="#">Gua nggak tau njir apa lagi</a>
+                                    </nav>
+                                </div>
+
+                                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError" onclick="collapsePassword()">
+                                    Password
+                                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                </a>
+                                <div class="collapse" id="pagesCollapsePassword" aria-labelledby="headingError" data-bs-parent="#sidenavAccordionPages">
+                                    <nav class="sb-sidenav-menu-nested nav">
+                                        <a class="nav-link" href="#">Banner</a>
+                                        <a class="nav-link" href="#">Ini gua juga nggak tau ditambah apa lagi</a>
+                                    </nav>
+                                </div>
+
                             </nav>
                         </div>
                     </div>
@@ -231,6 +334,14 @@
         var pagesOpen = false;
         var homeOpen = false;
         var realisasiOpen = false;
+        var blogOpen = false;
+        var blogDetailsOpen = false;
+        var projectDetailsOpen = false;
+        var protofolioOpen = false;
+        var contactOpen = false;
+        var pricingOpen = false;
+        var profilOpen = false;
+        var passwordOpen = false;
         function collapseLayouts() {
             layoutsOpen = !layoutsOpen;
             var element = document.getElementById("collapseLayouts");
@@ -271,6 +382,86 @@
                 element.classList.add("collapse");
             }
         }
+        function collapseBlog() {
+            blogOpen = !blogOpen;
+            var element = document.getElementById("pagesCollapseBlog");
+            if(blogOpen){
+                element.classList.remove("collapse");
+            }
+            else{
+                element.classList.add("collapse");
+            }
+        }
+        function collapseBlogDetails() {
+            blogDetailsOpen = !blogDetailsOpen;
+            var element = document.getElementById("pagesCollapseBlogDetails");
+            if(blogDetailsOpen){
+                element.classList.remove("collapse");
+            }
+            else{
+                element.classList.add("collapse");
+            }
+        }
+        function collapseProjectDetails() {
+            projectDetailsOpen = !projectDetailsOpen;
+            var element = document.getElementById("pagesCollapseProjectDetails");
+            if(projectDetailsOpen){
+                element.classList.remove("collapse");
+            }
+            else{
+                element.classList.add("collapse");
+            }
+        }
+        function collapsePortofolio() {
+            protofolioOpen = !protofolioOpen;
+            var element = document.getElementById("pagesCollapsePortofolio");
+            if(protofolioOpen){
+                element.classList.remove("collapse");
+            }
+            else{
+                element.classList.add("collapse");
+            }
+        }
+        function collapseContact() {
+            contactOpen = !contactOpen;
+            var element = document.getElementById("pagesCollapseContact");
+            if(contactOpen){
+                element.classList.remove("collapse");
+            }
+            else{
+                element.classList.add("collapse");
+            }
+        }
+        function collapsePricing() {
+            pricingOpen = !pricingOpen;
+            var element = document.getElementById("pagesCollapsePricing");
+            if(pricingOpen){
+                element.classList.remove("collapse");
+            }
+            else{
+                element.classList.add("collapse");
+            }
+        }
+        function collapseProfil() {
+            profilOpen = !profilOpen;
+            var element = document.getElementById("pagesCollapseProfil");
+            if(profilOpen){
+                element.classList.remove("collapse");
+            }
+            else{
+                element.classList.add("collapse");
+            }
+        }
+        function collapsePassword() {
+            passwordOpen = !passwordOpen;
+            var element = document.getElementById("pagesCollapsePassword");
+            if(passwordOpen){
+                element.classList.remove("collapse");
+            }
+            else{
+                element.classList.add("collapse");
+            }
+        }
 
         $(document).ready(function() {
             // Setup CSRF token untuk semua permintaan AJAX
@@ -294,17 +485,10 @@
                 });
             }
 
-            // Event handler untuk klik link Layouts
-            $('#link-layouts').on('click', function(e) {
-                e.preventDefault();
-                loadContent('{{ route('get.layouts.content') }}');
-            });
-
-            // Event handler untuk klik link Pages
-            $('#link-pages').on('click', function(e) {
-                e.preventDefault();
-                loadContent('{{ route('get.pages.content') }}');
-            });
+            // $('#home-hero').on('click', function(e) {
+            //     e.preventDefault();
+            //     loadContent('{{ route('get.pages.home.hero') }}');
+            // });
         });
     </script>
     {{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script> --}}

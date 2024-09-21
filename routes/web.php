@@ -68,3 +68,4 @@ Route::get('/404', function () {
 //buat konten
 Route::post('/get-layouts-content', [AjaxController::class, 'getLayoutsContent'])->name('get.layouts.content');
 Route::post('/get-pages-content', [AjaxController::class, 'getPagesContent'])->name('get.pages.content');
+Route::post('/get-pages-home-hero', [AjaxController::class, 'getPagesContent'])->name('get.pages.home.hero');
