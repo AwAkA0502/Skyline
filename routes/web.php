@@ -1,14 +1,15 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AjaxController;
 use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\PricingController;
+use App\Http\Controllers\Admin\HomepageController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\PortfolioController;
 use App\Http\Controllers\Admin\RealisasiController;
 use App\Http\Controllers\Admin\Auth\LoginController;
 use App\Http\Controllers\Admin\CreateAdminController;
-use App\Http\Controllers\Admin\HomepageController;
 
 Route::prefix('admin')->group(function () {
     // Rute login/logout admin
@@ -63,3 +64,7 @@ Route::get('/admin', function () {
 Route::get('/404', function () {
     return view('error.404');
 })->name('404');
+
+//buat konten
+Route::post('/get-layouts-content', [AjaxController::class, 'getLayoutsContent'])->name('get.layouts.content');
+Route::post('/get-pages-content', [AjaxController::class, 'getPagesContent'])->name('get.pages.content');
