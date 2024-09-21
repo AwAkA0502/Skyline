@@ -114,12 +114,12 @@
                                 </a>
                                 <div class="collapse" id="pagesCollapseRealisasi" aria-labelledby="headingError" data-bs-parent="#sidenavAccordionPages">
                                     <nav class="sb-sidenav-menu-nested nav">
-                                        <a class="nav-link" href="#">Banner</a>
-                                        <a class="nav-link" href="#">Realisasi Pembangunan</a>
-                                        <a class="nav-link" href="#">Proyek Berjalan</a>
-                                        <a class="nav-link" href="#">Video Realisasi Pembangunan</a>
-                                        <a class="nav-link" href="#">Realisasi Pembangunan Lainnya</a>
-                                        <a class="nav-link" href="#">Pilih Kategori Lainnya</a>
+                                        <a class="nav-link" href="#" id="realisasi-banner">Banner</a>
+                                        <a class="nav-link" href="#" id="realisasi-pembangunan">Realisasi Pembangunan</a>
+                                        <a class="nav-link" href="#" id="realisasi-proyek">Proyek Berjalan</a>
+                                        <a class="nav-link" href="#" id="realisasi-video">Video Realisasi Pembangunan</a>
+                                        <a class="nav-link" href="#" id="realisasi-lainnya">Realisasi Pembangunan Lainnya</a>
+                                        <a class="nav-link" href="#" id="realisasi-kategori">Pilih Kategori Lainnya</a>
                                     </nav>
                                 </div>
                                 
@@ -129,10 +129,10 @@
                                 </a>
                                 <div class="collapse" id="pagesCollapseBlog" aria-labelledby="headingError" data-bs-parent="#sidenavAccordionPages">
                                     <nav class="sb-sidenav-menu-nested nav">
-                                        <a class="nav-link" href="#">Banner</a>
-                                        <a class="nav-link" href="#">Latest Post</a>
-                                        <a class="nav-link" href="#">Articles & News</a>
-                                        <a class="nav-link" href="#">Maybe you like</a>
+                                        <a class="nav-link" href="#" id="blog-banner">Banner</a>
+                                        <a class="nav-link" href="#" id="blog-latest">Latest Post</a>
+                                        <a class="nav-link" href="#" id="blog-articles">Articles & News</a>
+                                        <a class="nav-link" href="#" id="blog-likes">Maybe you like</a>
                                     </nav>
                                 </div>
                                 
@@ -142,12 +142,12 @@
                                 </a>
                                 <div class="collapse" id="pagesCollapseBlogDetails" aria-labelledby="headingError" data-bs-parent="#sidenavAccordionPages">
                                     <nav class="sb-sidenav-menu-nested nav">
-                                        <a class="nav-link" href="#">Banner</a>
-                                        <a class="nav-link" href="#">Realisasi Pembangunan</a>
-                                        <a class="nav-link" href="#">Proyek Berjalan</a>
-                                        <a class="nav-link" href="#">Video Realisasi Pembangunan</a>
-                                        <a class="nav-link" href="#">Realisasi Pembangunan Lainnya</a>
-                                        <a class="nav-link" href="#">Pilih Kategori Lainnya</a>
+                                        <a class="nav-link" href="#" id="blogDetails-">Banner</a>
+                                        <a class="nav-link" href="#" id="blogDetails-">Realisasi Pembangunan</a>
+                                        <a class="nav-link" href="#" id="blogDetails-">Proyek Berjalan</a>
+                                        <a class="nav-link" href="#" id="blogDetails-">Video Realisasi Pembangunan</a>
+                                        <a class="nav-link" href="#" id="blogDetails-">Realisasi Pembangunan Lainnya</a>
+                                        <a class="nav-link" href="#" id="blogDetails-">Pilih Kategori Lainnya</a>
                                     </nav>
                                 </div>
 
@@ -157,12 +157,12 @@
                                 </a>
                                 <div class="collapse" id="pagesCollapseProjectDetails" aria-labelledby="headingError" data-bs-parent="#sidenavAccordionPages">
                                     <nav class="sb-sidenav-menu-nested nav">
-                                        <a class="nav-link" href="#">Banner</a>
-                                        <a class="nav-link" href="#">Realisasi Pembangunan</a>
-                                        <a class="nav-link" href="#">Proyek Berjalan</a>
-                                        <a class="nav-link" href="#">Video Realisasi Pembangunan</a>
-                                        <a class="nav-link" href="#">Realisasi Pembangunan Lainnya</a>
-                                        <a class="nav-link" href="#">Pilih Kategori Lainnya</a>
+                                        <a class="nav-link" href="#" id="projectDetails-">Banner</a>
+                                        <a class="nav-link" href="#" id="projectDetails-">Realisasi Pembangunan</a>
+                                        <a class="nav-link" href="#" id="projectDetails-">Proyek Berjalan</a>
+                                        <a class="nav-link" href="#" id="projectDetails-">Video Realisasi Pembangunan</a>
+                                        <a class="nav-link" href="#" id="projectDetails-">Realisasi Pembangunan Lainnya</a>
+                                        <a class="nav-link" href="#" id="projectDetails-">Pilih Kategori Lainnya</a>
                                     </nav>
                                 </div>
 
@@ -172,9 +172,9 @@
                                 </a>
                                 <div class="collapse" id="pagesCollapsePortofolio" aria-labelledby="headingError" data-bs-parent="#sidenavAccordionPages">
                                     <nav class="sb-sidenav-menu-nested nav">
-                                        <a class="nav-link" href="#">Banner</a>
-                                        <a class="nav-link" href="#">Desain Rumah</a>
-                                        <a class="nav-link" href="#">Video Realisasi Pembangunan</a>
+                                        <a class="nav-link" href="#" id="portofolio-banner">Banner</a>
+                                        <a class="nav-link" href="#" id="portofolio-desain">Desain Rumah</a>
+                                        <a class="nav-link" href="#" id="portofolio-video">Video Realisasi Pembangunan</a>
                                     </nav>
                                 </div>
 
@@ -184,9 +184,9 @@
                                 </a>
                                 <div class="collapse" id="pagesCollapseContact" aria-labelledby="headingError" data-bs-parent="#sidenavAccordionPages">
                                     <nav class="sb-sidenav-menu-nested nav">
-                                        <a class="nav-link" href="#">Banner</a>
-                                        <a class="nav-link" href="#">Kontak Skyline Arsitek</a>
-                                        <a class="nav-link" href="#">Alamat Skyline Arsitek</a>
+                                        <a class="nav-link" href="#" id="contact-banner">Banner</a>
+                                        <a class="nav-link" href="#" id="contact-contact">Kontak Skyline Arsitek</a>
+                                        <a class="nav-link" href="#" id="contact-address">Alamat Skyline Arsitek</a>
                                     </nav>
                                 </div>
 
@@ -196,10 +196,10 @@
                                 </a>
                                 <div class="collapse" id="pagesCollapsePricing" aria-labelledby="headingError" data-bs-parent="#sidenavAccordionPages">
                                     <nav class="sb-sidenav-menu-nested nav">
-                                        <a class="nav-link" href="#">Banner</a>
-                                        <a class="nav-link" href="#">Harga Jasa Skyline Terbaru</a>
-                                        <a class="nav-link" href="#">Pilihan Paket Desain</a>
-                                        <a class="nav-link" href="#">Sistem Pembayaran</a>
+                                        <a class="nav-link" href="#" id="pricing-banner">Banner</a>
+                                        <a class="nav-link" href="#" id="pricing-harga">Harga Jasa Skyline Terbaru</a>
+                                        <a class="nav-link" href="#" id="pricing-paket">Pilihan Paket Desain</a>
+                                        <a class="nav-link" href="#" id="pricing-pembayaran">Sistem Pembayaran</a>
                                     </nav>
                                 </div>
 
@@ -209,8 +209,8 @@
                                 </a>
                                 <div class="collapse" id="pagesCollapseProfil" aria-labelledby="headingError" data-bs-parent="#sidenavAccordionPages">
                                     <nav class="sb-sidenav-menu-nested nav">
-                                        <a class="nav-link" href="#">Banner</a>
-                                        <a class="nav-link" href="#">Gua nggak tau njir apa lagi</a>
+                                        <a class="nav-link" href="#" id="profil-banner">Banner</a>
+                                        <a class="nav-link" href="#" id="profil-">Gua nggak tau njir apa lagi</a>
                                     </nav>
                                 </div>
 
@@ -220,8 +220,8 @@
                                 </a>
                                 <div class="collapse" id="pagesCollapsePassword" aria-labelledby="headingError" data-bs-parent="#sidenavAccordionPages">
                                     <nav class="sb-sidenav-menu-nested nav">
-                                        <a class="nav-link" href="#">Banner</a>
-                                        <a class="nav-link" href="#">Ini gua juga nggak tau ditambah apa lagi</a>
+                                        <a class="nav-link" href="#" id="password-banner">Banner</a>
+                                        <a class="nav-link" href="#" id="password-">Ini gua juga nggak tau ditambah apa lagi</a>
                                     </nav>
                                 </div>
 
