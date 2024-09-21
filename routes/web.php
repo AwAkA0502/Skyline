@@ -66,6 +66,4 @@ Route::get('/404', function () {
 })->name('404');
 
 //buat konten
-Route::post('/get-layouts-content', [AjaxController::class, 'getLayoutsContent'])->name('get.layouts.content');
-Route::post('/get-pages-content', [AjaxController::class, 'getPagesContent'])->name('get.pages.content');
-Route::post('/get-pages-home-hero', [AjaxController::class, 'getPagesContent'])->name('get.pages.home.hero');
+Route::get('/get-pages-home-hero', [AjaxController::class, 'getHomeHero'])->name('get.pages.home.hero');

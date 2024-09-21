@@ -91,20 +91,20 @@
                                 </a>
                                 <div class="collapse" id="pagesCollapseHome" aria-labelledby="headingAuth" data-bs-parent="#sidenavAccordionPages">
                                     <nav class="sb-sidenav-menu-nested nav">
-                                        <a class="nav-link" href="#" id="home-hero">Hero</a>
-                                        <a class="nav-link" href="#" id="home-kategori">Kategori</a>
-                                        <a class="nav-link" href="#" id="home-desainpop">Desain Populer</a>
-                                        <a class="nav-link" href="#" id="home-desain3d">Desain 3 Dimensi</a>
-                                        <a class="nav-link" href="#" id="home-realisasi">Realisasi Pembangunan</a>
-                                        <a class="nav-link" href="#" id="home-video">Video Pembangunan</a>
-                                        <a class="nav-link" href="#" id="home-harga">Harga Jasa Arsitek</a>
-                                        <a class="nav-link" href="#" id="home-paket">PILIHAN PAKET DESAIN</a>
-                                        <a class="nav-link" href="#" id="home-solusi">Solusi lengkap untuk proyek bangunan Anda.</a>
-                                        <a class="nav-link" href="#" id="home-pikirkan">Apa yang Dipikirkan Masyarakat Tentang Kami</a>
-                                        <a class="nav-link" href="#" id="home-client">Client</a>
-                                        <a class="nav-link" href="#" id="home-statis">Statistik</a>
-                                        <a class="nav-link" href="#" id="home-artikel">Artikel</a>
-                                        <a class="nav-link" href="#" id="home-cta">CTA</a>
+                                        <a class="nav-link" href="#" data-route="home-hero">Hero</a>
+                                        <a class="nav-link" href="#" data-route="home-kategori">Kategori</a>
+                                        <a class="nav-link" href="#" data-route="home-desainpop">Desain Populer</a>
+                                        <a class="nav-link" href="#" data-route="home-desain3d">Desain 3 Dimensi</a>
+                                        <a class="nav-link" href="#" data-route="home-realisasi">Realisasi Pembangunan</a>
+                                        <a class="nav-link" href="#" data-route="home-vdata-routeeo">Vdata-routeeo Pembangunan</a>
+                                        <a class="nav-link" href="#" data-route="home-harga">Harga Jasa Arsitek</a>
+                                        <a class="nav-link" href="#" data-route="home-paket">PILIHAN PAKET DESAIN</a>
+                                        <a class="nav-link" href="#" data-route="home-solusi">Solusi lengkap untuk proyek bangunan Anda.</a>
+                                        <a class="nav-link" href="#" data-route="home-pikirkan">Apa yang Dipikirkan Masyarakat Tentang Kami</a>
+                                        <a class="nav-link" href="#" data-route="home-client">Client</a>
+                                        <a class="nav-link" href="#" data-route="home-statis">Statistik</a>
+                                        <a class="nav-link" href="#" data-route="home-artikel">Artikel</a>
+                                        <a class="nav-link" href="#" data-route="home-cta">CTA</a>
                                     </nav>
                                 </div>
                                 
@@ -114,12 +114,12 @@
                                 </a>
                                 <div class="collapse" id="pagesCollapseRealisasi" aria-labelledby="headingError" data-bs-parent="#sidenavAccordionPages">
                                     <nav class="sb-sidenav-menu-nested nav">
-                                        <a class="nav-link" href="#" id="realisasi-banner">Banner</a>
-                                        <a class="nav-link" href="#" id="realisasi-pembangunan">Realisasi Pembangunan</a>
-                                        <a class="nav-link" href="#" id="realisasi-proyek">Proyek Berjalan</a>
-                                        <a class="nav-link" href="#" id="realisasi-video">Video Realisasi Pembangunan</a>
-                                        <a class="nav-link" href="#" id="realisasi-lainnya">Realisasi Pembangunan Lainnya</a>
-                                        <a class="nav-link" href="#" id="realisasi-kategori">Pilih Kategori Lainnya</a>
+                                        <a class="nav-link" href="#" data-route="realisasi-banner">Banner</a>
+                                        <a class="nav-link" href="#" data-route="realisasi-pembangunan">Realisasi Pembangunan</a>
+                                        <a class="nav-link" href="#" data-route="realisasi-proyek">Proyek Berjalan</a>
+                                        <a class="nav-link" href="#" data-route="realisasi-video">Video Realisasi Pembangunan</a>
+                                        <a class="nav-link" href="#" data-route="realisasi-lainnya">Realisasi Pembangunan Lainnya</a>
+                                        <a class="nav-link" href="#" data-route="realisasi-kategori">Pilih Kategori Lainnya</a>
                                     </nav>
                                 </div>
                                 
@@ -129,10 +129,10 @@
                                 </a>
                                 <div class="collapse" id="pagesCollapseBlog" aria-labelledby="headingError" data-bs-parent="#sidenavAccordionPages">
                                     <nav class="sb-sidenav-menu-nested nav">
-                                        <a class="nav-link" href="#" id="blog-banner">Banner</a>
-                                        <a class="nav-link" href="#" id="blog-latest">Latest Post</a>
-                                        <a class="nav-link" href="#" id="blog-articles">Articles & News</a>
-                                        <a class="nav-link" href="#" id="blog-likes">Maybe you like</a>
+                                        <a class="nav-link" href="#" data-route="blog-banner">Banner</a>
+                                        <a class="nav-link" href="#" data-route="blog-latest">Latest Post</a>
+                                        <a class="nav-link" href="#" data-route="blog-articles">Articles & News</a>
+                                        <a class="nav-link" href="#" data-route="blog-likes">Maybe you like</a>
                                     </nav>
                                 </div>
                                 
@@ -142,12 +142,12 @@
                                 </a>
                                 <div class="collapse" id="pagesCollapseBlogDetails" aria-labelledby="headingError" data-bs-parent="#sidenavAccordionPages">
                                     <nav class="sb-sidenav-menu-nested nav">
-                                        <a class="nav-link" href="#" id="blogDetails-">Banner</a>
-                                        <a class="nav-link" href="#" id="blogDetails-">Realisasi Pembangunan</a>
-                                        <a class="nav-link" href="#" id="blogDetails-">Proyek Berjalan</a>
-                                        <a class="nav-link" href="#" id="blogDetails-">Video Realisasi Pembangunan</a>
-                                        <a class="nav-link" href="#" id="blogDetails-">Realisasi Pembangunan Lainnya</a>
-                                        <a class="nav-link" href="#" id="blogDetails-">Pilih Kategori Lainnya</a>
+                                        <a class="nav-link" href="#" data-route="blogDetails-">Banner</a>
+                                        <a class="nav-link" href="#" data-route="blogDetails-">Realisasi Pembangunan</a>
+                                        <a class="nav-link" href="#" data-route="blogDetails-">Proyek Berjalan</a>
+                                        <a class="nav-link" href="#" data-route="blogDetails-">Video Realisasi Pembangunan</a>
+                                        <a class="nav-link" href="#" data-route="blogDetails-">Realisasi Pembangunan Lainnya</a>
+                                        <a class="nav-link" href="#" data-route="blogDetails-">Pilih Kategori Lainnya</a>
                                     </nav>
                                 </div>
 
@@ -157,12 +157,12 @@
                                 </a>
                                 <div class="collapse" id="pagesCollapseProjectDetails" aria-labelledby="headingError" data-bs-parent="#sidenavAccordionPages">
                                     <nav class="sb-sidenav-menu-nested nav">
-                                        <a class="nav-link" href="#" id="projectDetails-">Banner</a>
-                                        <a class="nav-link" href="#" id="projectDetails-">Realisasi Pembangunan</a>
-                                        <a class="nav-link" href="#" id="projectDetails-">Proyek Berjalan</a>
-                                        <a class="nav-link" href="#" id="projectDetails-">Video Realisasi Pembangunan</a>
-                                        <a class="nav-link" href="#" id="projectDetails-">Realisasi Pembangunan Lainnya</a>
-                                        <a class="nav-link" href="#" id="projectDetails-">Pilih Kategori Lainnya</a>
+                                        <a class="nav-link" href="#" data-route="projectDetails-">Banner</a>
+                                        <a class="nav-link" href="#" data-route="projectDetails-">Realisasi Pembangunan</a>
+                                        <a class="nav-link" href="#" data-route="projectDetails-">Proyek Berjalan</a>
+                                        <a class="nav-link" href="#" data-route="projectDetails-">Video Realisasi Pembangunan</a>
+                                        <a class="nav-link" href="#" data-route="projectDetails-">Realisasi Pembangunan Lainnya</a>
+                                        <a class="nav-link" href="#" data-route="projectDetails-">Pilih Kategori Lainnya</a>
                                     </nav>
                                 </div>
 
@@ -172,9 +172,9 @@
                                 </a>
                                 <div class="collapse" id="pagesCollapsePortofolio" aria-labelledby="headingError" data-bs-parent="#sidenavAccordionPages">
                                     <nav class="sb-sidenav-menu-nested nav">
-                                        <a class="nav-link" href="#" id="portofolio-banner">Banner</a>
-                                        <a class="nav-link" href="#" id="portofolio-desain">Desain Rumah</a>
-                                        <a class="nav-link" href="#" id="portofolio-video">Video Realisasi Pembangunan</a>
+                                        <a class="nav-link" href="#" data-route="portofolio-banner">Banner</a>
+                                        <a class="nav-link" href="#" data-route="portofolio-desain">Desain Rumah</a>
+                                        <a class="nav-link" href="#" data-route="portofolio-video">Video Realisasi Pembangunan</a>
                                     </nav>
                                 </div>
 
@@ -184,9 +184,9 @@
                                 </a>
                                 <div class="collapse" id="pagesCollapseContact" aria-labelledby="headingError" data-bs-parent="#sidenavAccordionPages">
                                     <nav class="sb-sidenav-menu-nested nav">
-                                        <a class="nav-link" href="#" id="contact-banner">Banner</a>
-                                        <a class="nav-link" href="#" id="contact-contact">Kontak Skyline Arsitek</a>
-                                        <a class="nav-link" href="#" id="contact-address">Alamat Skyline Arsitek</a>
+                                        <a class="nav-link" href="#" data-route="contact-banner">Banner</a>
+                                        <a class="nav-link" href="#" data-route="contact-contact">Kontak Skyline Arsitek</a>
+                                        <a class="nav-link" href="#" data-route="contact-address">Alamat Skyline Arsitek</a>
                                     </nav>
                                 </div>
 
@@ -196,10 +196,10 @@
                                 </a>
                                 <div class="collapse" id="pagesCollapsePricing" aria-labelledby="headingError" data-bs-parent="#sidenavAccordionPages">
                                     <nav class="sb-sidenav-menu-nested nav">
-                                        <a class="nav-link" href="#" id="pricing-banner">Banner</a>
-                                        <a class="nav-link" href="#" id="pricing-harga">Harga Jasa Skyline Terbaru</a>
-                                        <a class="nav-link" href="#" id="pricing-paket">Pilihan Paket Desain</a>
-                                        <a class="nav-link" href="#" id="pricing-pembayaran">Sistem Pembayaran</a>
+                                        <a class="nav-link" href="#" data-route="pricing-banner">Banner</a>
+                                        <a class="nav-link" href="#" data-route="pricing-harga">Harga Jasa Skyline Terbaru</a>
+                                        <a class="nav-link" href="#" data-route="pricing-paket">Pilihan Paket Desain</a>
+                                        <a class="nav-link" href="#" data-route="pricing-pembayaran">Sistem Pembayaran</a>
                                     </nav>
                                 </div>
 
@@ -209,8 +209,8 @@
                                 </a>
                                 <div class="collapse" id="pagesCollapseProfil" aria-labelledby="headingError" data-bs-parent="#sidenavAccordionPages">
                                     <nav class="sb-sidenav-menu-nested nav">
-                                        <a class="nav-link" href="#" id="profil-banner">Banner</a>
-                                        <a class="nav-link" href="#" id="profil-">Gua nggak tau njir apa lagi</a>
+                                        <a class="nav-link" href="#" data-route="profil-banner">Banner</a>
+                                        <a class="nav-link" href="#" data-route="profil-">Gua nggak tau njir apa lagi</a>
                                     </nav>
                                 </div>
 
@@ -220,8 +220,8 @@
                                 </a>
                                 <div class="collapse" id="pagesCollapsePassword" aria-labelledby="headingError" data-bs-parent="#sidenavAccordionPages">
                                     <nav class="sb-sidenav-menu-nested nav">
-                                        <a class="nav-link" href="#" id="password-banner">Banner</a>
-                                        <a class="nav-link" href="#" id="password-">Ini gua juga nggak tau ditambah apa lagi</a>
+                                        <a class="nav-link" href="#" data-route="password-banner">Banner</a>
+                                        <a class="nav-link" href="#" data-route="password-">Ini gua juga nggak tau ditambah apa lagi</a>
                                     </nav>
                                 </div>
 
@@ -472,12 +472,33 @@
             });
 
             // Fungsi untuk memuat konten melalui AJAX
-            function loadContent(url) {
+            // function loadContent(url) {
+            //     $.ajax({
+            //         url: url,
+            //         type: 'POST',
+            //         success: function(response) {
+            //             $('#main-content').html(response.content);
+            //         },
+            //         error: function(xhr) {
+            //             console.log('Error:', xhr.statusText);
+            //         }
+            //     });
+            // }
+
+            // $('#home-hero').on('click', function(e) {
+            //     e.preventDefault();
+            //     loadContent('{{ route('get.pages.home.hero') }}');
+            // });
+            function loadContent(routeName) {
+                // const url = `{{ url('/') }}/` + routeName.replace('-', '/');
+                const url = `{{ url('/') }}/get-pages-` + routeName;
+                console.log(url);
+                
                 $.ajax({
                     url: url,
-                    type: 'POST',
+                    type: 'GET', // Gunakan GET karena kita memuat konten halaman
                     success: function(response) {
-                        $('#main-content').html(response.content);
+                        $('#main-content').html(response); // Masukkan respons langsung ke main-content
                     },
                     error: function(xhr) {
                         console.log('Error:', xhr.statusText);
@@ -485,10 +506,11 @@
                 });
             }
 
-            // $('#home-hero').on('click', function(e) {
-            //     e.preventDefault();
-            //     loadContent('{{ route('get.pages.home.hero') }}');
-            // });
+            $('a[data-route]').on('click', function(e) {
+                e.preventDefault();
+                const routeName = $(this).data('route'); // Mengambil nilai dari data-route
+                loadContent(routeName); // Panggil fungsi loadContent dengan routeName
+            });
         });
     </script>
     {{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script> --}}
