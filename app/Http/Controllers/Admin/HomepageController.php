@@ -3,7 +3,12 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Models\Homepage;
+use App\Models\SizeCategory;
 use Illuminate\Http\Request;
+use App\Models\DesignPopular;
+use App\Models\FloorCategory;
+use App\Models\PopularDesign;
+use App\Models\StyleCategory;
 use App\Http\Controllers\Controller;
 
 class HomePageController extends Controller
@@ -12,14 +17,18 @@ class HomePageController extends Controller
     public function showHomePage()
     {
         // Mengambil data untuk setiap section di homepage
-        $design_popular = Homepage::where('section', 'design_popular')->get();
+        $design_popular = DesignPopular::all();
         $design_3d = Homepage::where('section', 'design_3d')->get();
         $realisasi_pembangunan = Homepage::where('section', 'realisasi_pembangunan')->get();
         $video_pembangunan = Homepage::where('section', 'video_pembangunan')->get();
         $contact = Homepage::where('section', 'contact')->first();
+        $style_categories = StyleCategory::all();
+        $size_categories = SizeCategory::all();
+        $floor_categories = FloorCategory::all();
+        // $popular_design = PopularDesign::all();
 
         // Mengembalikan view home dengan data section
-        return view('home', compact('design_popular', 'design_3d', 'realisasi_pembangunan', 'video_pembangunan', 'contact'));
+        return view('home', compact('design_popular', 'design_3d', 'realisasi_pembangunan', 'video_pembangunan', 'contact', 'style_categories', 'size_categories', 'floor_categories'));
     }
     public function deleteDesignPopular(Request $request)
 {

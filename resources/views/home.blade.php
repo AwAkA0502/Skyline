@@ -98,100 +98,40 @@
                                     <img src="{{ asset('assets/images/vector.svg') }}" alt="">
                                 </div>
                             </li>
-                            <li class="flex justify-between">
-                                Style Tropis 
-                                <div class="bg-primary3 rounded-full w-[30px] h-[30px] grid place-items-center">
-                                    <img src="{{ asset('assets/images/vector.svg') }}" alt="">
-                                </div>
-                            </li>
-                            <li class="flex justify-between">
-                                Style Minimalis 
-                                <div class="bg-primary3 rounded-full w-[30px] h-[30px] grid place-items-center">
-                                    <img src="{{ asset('assets/images/vector.svg') }}" alt="">
-                                </div>
-                            </li>
-                            <li class="flex justify-between">
-                                Style Modern 
-                                <div class="bg-primary3 rounded-full w-[30px] h-[30px] grid place-items-center">
-                                    <img src="{{ asset('assets/images/vector.svg') }}" alt="">
-                                </div>
-                            </li>
-                            <li class="flex justify-between">
-                                Style Bali 
-                                <div class="bg-primary3 rounded-full w-[30px] h-[30px] grid place-items-center">
-                                    <img src="{{ asset('assets/images/vector.svg') }}" alt="">
-                                </div>
-                            </li>
-                            <li class="flex justify-between">
-                                Style Mediterania 
-                                <div class="bg-primary3 rounded-full w-[30px] h-[30px] grid place-items-center">
-                                    <img src="{{ asset('assets/images/vector.svg') }}" alt="">
-                                </div>
-                            </li>
+                            @foreach ($style_categories as $category)
+                                <li class="flex justify-between">
+                                    {{ $category->name }} 
+                                    <div class="bg-primary3 rounded-full w-[30px] h-[30px] grid place-items-center">
+                                        <img src="{{ asset('assets/images/vector.svg') }}" alt="">
+                                    </div>
+                                </li>
+                            @endforeach
                         </ul>
                     </div>
                     <div class="desktop:w-[28%] mobile:w-[90%] border border-[#E7E7E7] rounded-[62px] p-8">
                         <h2 class="font-dm-serif text-[24px] text-center mb-8">Lebar Tanah</h2>
                         <ul class="px-4 space-y-5 text-lg">
-                            <li class="flex justify-between">
-                                8 Meter - 10 Meter 
-                                <div class="bg-primary3 rounded-full w-[30px] h-[30px] grid place-items-center">
-                                    <img src="{{ asset('assets/images/vector.svg') }}" alt="">
-                                </div>
-                            </li>
-                            <li class="flex justify-between">
-                                11 Meter - 15 meter 
-                                <div class="bg-primary3 rounded-full w-[30px] h-[30px] grid place-items-center">
-                                    <img src="{{ asset('assets/images/vector.svg') }}" alt="">
-                                </div>
-                            </li>
-                            <li class="flex justify-between">
-                                16 Meter -  20 Meter 
-                                <div class="bg-primary3 rounded-full w-[30px] h-[30px] grid place-items-center">
-                                    <img src="{{ asset('assets/images/vector.svg') }}" alt="">
-                                </div>
-                            </li>
-                            <li class="flex justify-between">
-                                Lebih dari 20 Meter 
-                                <div class="bg-primary3 rounded-full w-[30px] h-[30px] grid place-items-center">
-                                    <img src="{{ asset('assets/images/vector.svg') }}" alt="">
-                                </div>
-                            </li>
+                            @foreach ($size_categories as $category)
+                                <li class="flex justify-between">
+                                    {{ $category->name }} 
+                                    <div class="bg-primary3 rounded-full w-[30px] h-[30px] grid place-items-center">
+                                        <img src="{{ asset('assets/images/vector.svg') }}" alt="">
+                                    </div>
+                                </li>
+                            @endforeach
                         </ul>
                     </div>
                     <div class="desktop:w-[28%] mobile:w-[90%] border border-[#E7E7E7] rounded-[62px] p-8">
                         <h2 class="font-dm-serif text-[24px] text-center mb-8">Jumlah Lantai</h2>
                         <ul class="px-4 space-y-5 text-lg">
-                            <li class="flex justify-between">
-                                1 Lantai 
-                                <div class="bg-primary3 rounded-full w-[30px] h-[30px] grid place-items-center">
-                                    <img src="{{ asset('assets/images/vector.svg') }}" alt="">
-                                </div>
-                            </li>
-                            <li class="flex justify-between">
-                                2 Lantai 
-                                <div class="bg-primary3 rounded-full w-[30px] h-[30px] grid place-items-center">
-                                    <img src="{{ asset('assets/images/vector.svg') }}" alt="">
-                                </div>
-                            </li>
-                            <li class="flex justify-between">
-                                3 Lantai 
-                                <div class="bg-primary3 rounded-full w-[30px] h-[30px] grid place-items-center">
-                                    <img src="{{ asset('assets/images/vector.svg') }}" alt="">
-                                </div>
-                            </li>
-                            <li class="flex justify-between">
-                                4 Lantai 
-                                <div class="bg-primary3 rounded-full w-[30px] h-[30px] grid place-items-center">
-                                    <img src="{{ asset('assets/images/vector.svg') }}" alt="">
-                                </div>
-                            </li>
-                            <li class="flex justify-between">
-                                Lebih dari 4 Lantai 
-                                <div class="bg-primary3 rounded-full w-[30px] h-[30px] grid place-items-center">
-                                    <img src="{{ asset('assets/images/vector.svg') }}" alt="">
-                                </div>
-                            </li>
+                            @foreach ($floor_categories as $category)
+                                <li class="flex justify-between">
+                                    {{ $category->name }} 
+                                    <div class="bg-primary3 rounded-full w-[30px] h-[30px] grid place-items-center">
+                                        <img src="{{ asset('assets/images/vector.svg') }}" alt="">
+                                    </div>
+                                </li>
+                            @endforeach
                         </ul>
                     </div>
                 </div>
@@ -207,7 +147,7 @@
                     @foreach ($design_popular as $card)
                     <div class="w-[45%]">
                         @if ($card->image)
-                            <img class="rounded-tr-[80px] mb-5 min-h-[548px]" src="{{ asset('storage/' . $card->image) }}" alt="{{ $card->title }}">
+                            <img class="rounded-tr-[80px] mb-5 min-h-[548px]" src="{{ asset('storage/app/public/' . $card->path) }}" alt="{{ $card->title }}">
                         @endif
                         <div class="flex justify-between items-center">
                             <div>

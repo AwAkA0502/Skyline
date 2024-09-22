@@ -2,15 +2,21 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AjaxController;
+use App\Http\Controllers\PopularController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\Admin\BlogController;
+use App\Http\Controllers\SizeCategoryController;
 use App\Http\Controllers\Admin\PricingController;
+use App\Http\Controllers\FloorCategoryController;
+use App\Http\Controllers\StyleCategoryController;
 use App\Http\Controllers\Admin\HomepageController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\PortfolioController;
 use App\Http\Controllers\Admin\RealisasiController;
 use App\Http\Controllers\Admin\Auth\LoginController;
 use App\Http\Controllers\Admin\CreateAdminController;
-use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\DesignPopularController;
+
 
 Route::prefix('admin')->group(function () {
     // Rute login/logout admin
@@ -46,16 +52,30 @@ Route::prefix('admin')->group(function () {
 
         // Routes untuk HomePage
         Route::prefix('dashboard/pages/home')->group(function () {
+            Route::post('design-populer', [DesignPopularController::class, 'update'])->name('design.populer.update');
+            Route::get('popular', [DashboardController::class, 'homePopular'])->name('home.populer');
+
+
+            
             Route::get('hero', [DashboardController::class, 'homeHero'])->name('home.hero');
             Route::get('category', [DashboardController::class, 'homeCategory'])->name('home.category');
-            Route::post('category', [CategoryController::class, 'store'])->name('category.store');
-            Route::resource('categories', CategoryController::class);
-            Route::delete('categories/{category}', [CategoryController::class, 'destroy'])->name('categories.destroy');
-            // Route::post('categories-update/{category}', [CategoryController::class, 'update'])->name('categories.update');
-            Route::post('categories-update/{id}', [CategoryController::class, 'update'])->name('categories.update');
+            Route::post('style-category', [StyleCategoryController::class, 'store'])->name('category.store');
+            Route::delete('style-category-del/{category}', [StyleCategoryController::class, 'destroy'])->name('categories.destroy');
+            Route::post('style-category-up/{id}', [StyleCategoryController::class, 'update'])->name('categories.update');
+            
+            Route::post('size-category', [SizeCategoryController::class, 'store'])->name('size.category.store');
+            Route::delete('size-category-del/{category}', [SizeCategoryController::class, 'destroy'])->name('size.categories.destroy');
+            Route::post('size-category-up/{id}', [SizeCategoryController::class, 'update'])->name('size.categories.update');
+            // Route::resource('categories', StyleCategoryController::class);
+            // Route::post('categories-update/{category}', [StyleCategoryController::class, 'update'])->name('categories.update');
+            
+            Route::post('floor-category', [FloorCategoryController::class, 'store'])->name('floor.category.store');
+            Route::delete('floor-category-del/{category}', [FloorCategoryController::class, 'destroy'])->name('floor.categories.destroy');
+            Route::post('floor-category-up/{id}', [FloorCategoryController::class, 'update'])->name('floor.categories.update');
+            // Route::resource('categories', StyleCategoryController::class);
+            // Route::post('categories-update/{category}', [StyleCategoryController::class, 'update'])->name('categories.update');
 
 
-            Route::get('popular', [DashboardController::class, 'homePopular'])->name('home.popular');
             Route::get('3ddesain', [DashboardController::class, 'home3DDesain'])->name('home.3ddesain');
             Route::get('realization', [DashboardController::class, 'homeRealization'])->name('home.realization');
             Route::get('price', [DashboardController::class, 'homePrice'])->name('home.price');

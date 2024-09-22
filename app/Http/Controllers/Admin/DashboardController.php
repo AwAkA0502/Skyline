@@ -3,7 +3,11 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Models\Category;
+use App\Models\DesignPopular;
+use App\Models\SizeCategory;
 use Illuminate\Http\Request;
+use App\Models\FloorCategory;
+use App\Models\StyleCategory;
 use App\Http\Controllers\Controller;
 
 class DashboardController extends Controller
@@ -26,13 +30,16 @@ class DashboardController extends Controller
 
     public function homeCategory()
     {
-        $categories = Category::all();
-        return view('admin.dashboard.pages.home.category', compact('categories'));
+        $style_categories = StyleCategory::all();
+        $size_categories = SizeCategory::all();
+        $floor_categories = FloorCategory::all();
+        return view('admin.dashboard.pages.home.category', compact('style_categories', 'size_categories', 'floor_categories'));
     }
 
     public function homePopular()
     {
-        return view('admin.dashboard.pages.home.popular');
+        $popular_designs = DesignPopular::all();
+        return view('admin.dashboard.pages.home.popular', compact('popular_designs',));
     }
 
     public function home3DDesain()
