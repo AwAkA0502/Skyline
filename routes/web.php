@@ -78,6 +78,7 @@ Route::prefix('admin')->group(function () {
 
             Route::get('3ddesain', [DashboardController::class, 'home3DDesain'])->name('home.3ddesain');
             Route::get('realization', [DashboardController::class, 'homeRealization'])->name('home.realization');
+            Route::get('video', [DashboardController::class, 'homevideo'])->name('home.build-video');
             Route::get('price', [DashboardController::class, 'homePrice'])->name('home.price');
             Route::get('package', [DashboardController::class, 'homePackage'])->name('home.package');
             Route::get('about', [DashboardController::class, 'homeAbout'])->name('home.about');

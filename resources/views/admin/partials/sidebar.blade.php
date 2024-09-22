@@ -38,6 +38,7 @@
                 <a class="nav-link" href="#" data-route="home-popular">Popular Design</a>
                 <a class="nav-link" href="#" data-route="home-3ddesain">3D Design</a>
                 <a class="nav-link" href="#" data-route="home-realization">Realization</a>
+                <a class="nav-link" href="#" data-route="home-video">Build Video</a>
                 <a class="nav-link" href="#" data-route="home-price">Price</a>
                 <a class="nav-link" href="#" data-route="home-package">Package</a>
                 <a class="nav-link" href="#" data-route="home-about">About Us</a>
