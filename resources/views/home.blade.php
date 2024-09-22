@@ -146,8 +146,8 @@
                 <div class="flex flex-wrap justify-around text-primary2 gap-y-12">
                     @foreach ($design_popular as $card)
                     <div class="w-[45%]">
-                        @if ($card->image)
-                            <img class="rounded-tr-[80px] mb-5 min-h-[548px]" src="{{ asset('storage/app/public/' . $card->path) }}" alt="{{ $card->title }}">
+                        @if ($card->path)
+                            <img class="rounded-tr-[80px] mb-5 min-h-[548px]" src="{{ asset('storage/' . $card->path) }}" alt="{{ $card->title }}">
                         @endif
                         <div class="flex justify-between items-center">
                             <div>

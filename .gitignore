@@ -49,5 +49,4 @@ yarn-error.log
 # Ignore system files
 Thumbs.db
 .DS_Store
-
-.env
+public/storage
