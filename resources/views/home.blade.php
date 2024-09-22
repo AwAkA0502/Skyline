@@ -190,15 +190,15 @@
                     <p>It is a long established fact that a reader will be distracted by the of readable content of page lookings at its layouts points.</p>
                 </div>
                 <div class="flex flex-wrap justify-around text-primary2 gap-y-12">
-                    <div class="w-[95%]">
-                        <img class="rounded-[20px]" src="{{ asset('assets/images/photo5.png') }}" alt="">
-                    </div>
-                    <div class="w-[45%]">
-                        <img src="{{ asset('assets/images/photo3.png') }}" alt="">
-                    </div>
-                    <div class="w-[45%]">
-                        <img src="{{ asset('assets/images/photo4.png') }}" alt="">
-                    </div>
+                    <!-- Looping data realisasi -->
+                    @foreach($realisis as $realisasi)
+                        <div class="w-[45%] mb-4">
+                            <!-- Membungkus gambar dengan tag <a> agar bisa diklik -->
+                            <a href="{{ $realisasi->link_youtube }}" target="_blank">
+                                <img class="rounded-[20px] cursor-pointer" src="{{ asset($realisasi->image) }}" alt="Realisasi Image">
+                            </a>
+                        </div>
+                    @endforeach
                 </div>
                 <a href="#" class="inline-block bg-primary2 text-white px-9 py-5 mt-10 rounded-[18px] font-medium">
                     Lihat Lebih Banyak <b class="text-primary1 ml-2">→</b>

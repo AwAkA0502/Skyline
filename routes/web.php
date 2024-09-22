@@ -78,6 +78,8 @@ Route::prefix('admin')->group(function () {
 
             Route::get('3ddesain', [DashboardController::class, 'home3DDesain'])->name('home.3ddesain');
             Route::get('realization', [DashboardController::class, 'homeRealization'])->name('home.realization');
+            Route::post('video-update/{id}', [RealisasiController::class, 'updatePost']);            
+            Route::resource('realisasi', RealisasiController::class);
             Route::get('video', [DashboardController::class, 'homevideo'])->name('home.build-video');
             Route::get('price', [DashboardController::class, 'homePrice'])->name('home.price');
             Route::get('package', [DashboardController::class, 'homePackage'])->name('home.package');

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Models\Homepage;
+use App\Models\Realisasi;
 use App\Models\SizeCategory;
 use Illuminate\Http\Request;
 use App\Models\DesignPopular;
@@ -17,6 +18,7 @@ class HomePageController extends Controller
     public function showHomePage()
     {
         // Mengambil data untuk setiap section di homepage
+        $realisis = Realisasi::all();
         $design_popular = DesignPopular::all();
         $design_3d = Homepage::where('section', 'design_3d')->get();
         $realisasi_pembangunan = Homepage::where('section', 'realisasi_pembangunan')->get();
@@ -28,7 +30,7 @@ class HomePageController extends Controller
         // $popular_design = PopularDesign::all();
 
         // Mengembalikan view home dengan data section
-        return view('home', compact('design_popular', 'design_3d', 'realisasi_pembangunan', 'video_pembangunan', 'contact', 'style_categories', 'size_categories', 'floor_categories'));
+        return view('home', compact('design_popular', 'design_3d', 'realisasi_pembangunan', 'video_pembangunan', 'contact', 'style_categories', 'size_categories', 'floor_categories','realisis'));
     }
     public function deleteDesignPopular(Request $request)
 {

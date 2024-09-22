@@ -182,24 +182,24 @@
                     ClassicEditor
                         .create(editorElement)
                         .then(editor => {
-    editorInstance = editor;
+                        editorInstance = editor;
 
-    // Set tinggi awal saat inisialisasi
-    editor.ui.view.editable.element.style.minHeight = '100px';
-    editor.ui.view.editable.element.style.height = '100px';
+                        // Set tinggi awal saat inisialisasi
+                        editor.ui.view.editable.element.style.minHeight = '100px';
+                        editor.ui.view.editable.element.style.height = '100px';
 
-    // Pastikan tinggi tidak berubah saat fokus atau blur
-    editor.ui.focusTracker.on('change:isFocused', (evt, name, isFocused) => {
-        if (isFocused) {
-            editor.ui.view.editable.element.style.minHeight = '100px';
-            editor.ui.view.editable.element.style.height = '100px';
-        } else {
-            // Jika diperlukan, tambahkan logika untuk saat blur
-            editor.ui.view.editable.element.style.minHeight = '100px';
-            editor.ui.view.editable.element.style.height = '100px';
-        }
-    });
-})
+                        // Pastikan tinggi tidak berubah saat fokus atau blur
+                        editor.ui.focusTracker.on('change:isFocused', (evt, name, isFocused) => {
+                            if (isFocused) {
+                                editor.ui.view.editable.element.style.minHeight = '100px';
+                                editor.ui.view.editable.element.style.height = '100px';
+                            } else {
+                                // Jika diperlukan, tambahkan logika untuk saat blur
+                                editor.ui.view.editable.element.style.minHeight = '100px';
+                                editor.ui.view.editable.element.style.height = '100px';
+                            }
+                        });
+                    })
                         .catch(error => {
                             console.error(error);
                         });

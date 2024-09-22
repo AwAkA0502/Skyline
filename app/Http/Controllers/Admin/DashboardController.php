@@ -3,9 +3,10 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Models\Category;
-use App\Models\DesignPopular;
+use App\Models\Realisasi;
 use App\Models\SizeCategory;
 use Illuminate\Http\Request;
+use App\Models\DesignPopular;
 use App\Models\FloorCategory;
 use App\Models\StyleCategory;
 use App\Http\Controllers\Controller;
@@ -49,7 +50,8 @@ class DashboardController extends Controller
 
     public function homeRealization()
     {
-        return view('admin.dashboard.pages.home.realization');
+        $realisasis = Realisasi::all();
+        return view('admin.dashboard.pages.home.realization', compact('realisasis'));
     }
 
     public function homevideo()
