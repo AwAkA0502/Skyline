@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Category;
+use App\Models\SizeCategory;
 use Illuminate\Http\Request;
 
-class CategoryController extends Controller
+class SizeCategoryController extends Controller
 {
     public function index(){
         
@@ -19,18 +19,18 @@ class CategoryController extends Controller
         ]);
 
         // Simpan kategori baru
-        $category = new Category();
+        $category = new SizeCategory();
         $category->name = $request->input('name');
         $category->save();
 
         // Redirect ke halaman yang diinginkan dengan pesan sukses
-        return redirect()->route('category.store');
+        return back();
     }
 
     public function destroy($id)
     {
         // Cari kategori berdasarkan ID
-        $category = Category::findOrFail($id);
+        $category = SizeCategory::findOrFail($id);
         
         // Hapus kategori
         $category->delete();
@@ -46,12 +46,11 @@ class CategoryController extends Controller
             'name' => 'required|string|max:255',
         ]);
     
-        $category = Category::findOrFail($id);
+        $category = SizeCategory::findOrFail($id);
         $category->name = $request->input('name');
         $category->save();
     
         // return redirect()->route('categories.index')->with('success', 'Kategori berhasil diperbarui!');
         return back();
     }
-    
 }

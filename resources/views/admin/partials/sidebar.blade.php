@@ -34,7 +34,7 @@
         <div class="collapse" id="pagesCollapseHome" aria-labelledby="headingAuth" data-bs-parent="#sidenavAccordionPages">
             <nav class="sb-sidenav-menu-nested nav">
                 <a class="nav-link" href="#" data-route="home-hero">Hero</a>
-                <a class="nav-link" href="#" data-route="home-category">Category</a>
+                <a class="nav-link" href="#" data-route="home-category" >Category</a>
                 <a class="nav-link" href="#" data-route="home-popular">Popular Design</a>
                 <a class="nav-link" href="#" data-route="home-3ddesain">3D Design</a>
                 <a class="nav-link" href="#" data-route="home-realization">Realization</a>
