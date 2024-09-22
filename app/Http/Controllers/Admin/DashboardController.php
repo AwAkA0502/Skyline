@@ -52,6 +52,11 @@ class DashboardController extends Controller
         return view('admin.dashboard.pages.home.realization');
     }
 
+    public function homevideo()
+    {
+        return view('admin.dashboard.pages.home.build-video');
+    }
+
     public function homePrice()
     {
         return view('admin.dashboard.pages.home.price');
