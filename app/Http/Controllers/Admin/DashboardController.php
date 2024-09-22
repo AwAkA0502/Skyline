@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Models\Category;
+use App\Models\DesignPopular;
 use App\Models\SizeCategory;
 use Illuminate\Http\Request;
 use App\Models\FloorCategory;
@@ -37,7 +38,8 @@ class DashboardController extends Controller
 
     public function homePopular()
     {
-        return view('admin.dashboard.pages.home.popular');
+        $popular_designs = DesignPopular::all();
+        return view('admin.dashboard.pages.home.popular', compact('popular_designs',));
     }
 
     public function home3DDesain()

@@ -147,7 +147,7 @@
                     @foreach ($design_popular as $card)
                     <div class="w-[45%]">
                         @if ($card->image)
-                            <img class="rounded-tr-[80px] mb-5 min-h-[548px]" src="{{ asset('storage/' . $card->image) }}" alt="{{ $card->title }}">
+                            <img class="rounded-tr-[80px] mb-5 min-h-[548px]" src="{{ asset('storage/app/public/' . $card->path) }}" alt="{{ $card->title }}">
                         @endif
                         <div class="flex justify-between items-center">
                             <div>

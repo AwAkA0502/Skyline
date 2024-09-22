@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AjaxController;
+use App\Http\Controllers\PopularController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\SizeCategoryController;
@@ -14,6 +15,8 @@ use App\Http\Controllers\Admin\PortfolioController;
 use App\Http\Controllers\Admin\RealisasiController;
 use App\Http\Controllers\Admin\Auth\LoginController;
 use App\Http\Controllers\Admin\CreateAdminController;
+use App\Http\Controllers\DesignPopularController;
+
 
 Route::prefix('admin')->group(function () {
     // Rute login/logout admin
@@ -49,6 +52,10 @@ Route::prefix('admin')->group(function () {
 
         // Routes untuk HomePage
         Route::prefix('dashboard/pages/home')->group(function () {
+            Route::post('design-populer', [DesignPopularController::class, 'update'])->name('design.populer.update');
+            Route::get('popular', [DashboardController::class, 'homePopular'])->name('home.populer');
+
+
             
             Route::get('hero', [DashboardController::class, 'homeHero'])->name('home.hero');
             Route::get('category', [DashboardController::class, 'homeCategory'])->name('home.category');
@@ -68,7 +75,7 @@ Route::prefix('admin')->group(function () {
             // Route::resource('categories', StyleCategoryController::class);
             // Route::post('categories-update/{category}', [StyleCategoryController::class, 'update'])->name('categories.update');
 
-            Route::get('popular', [DashboardController::class, 'homePopular'])->name('home.popular');
+
             Route::get('3ddesain', [DashboardController::class, 'home3DDesain'])->name('home.3ddesain');
             Route::get('realization', [DashboardController::class, 'homeRealization'])->name('home.realization');
             Route::get('price', [DashboardController::class, 'homePrice'])->name('home.price');
